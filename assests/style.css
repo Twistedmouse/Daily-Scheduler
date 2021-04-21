@@ -23,7 +23,12 @@ textarea{
   border-bottom: 10px solid black;
   animation: grad 20s infinite alternate;
   height: 200px;
+  padding: 15px;
 }
+
+/* h1{
+  padding-top: 0px;
+} */
 
 .lead{
   color: rgba(240, 240, 240, 0.734);
