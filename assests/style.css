@@ -70,12 +70,11 @@ textarea{
 
 .hour {
   background-color: #ffffff;
-  color: #000000;
+  color: #272727;
   border-top: 1px dashed #000000;
 }
 
 .past {
-  background-color: ;
   background: linear-gradient(90deg, white 0.5%, #d3d3d3bf 65%, rgba(19, 162, 194, 0.734)100%);
   color: rgb(46, 45, 45);
 }
@@ -104,10 +103,5 @@ textarea{
 
 .saveBtn i:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
-}
-
-.col-sm{
-  padding:0%;
-
+  transition: all .1s ease-in-out;
 }
