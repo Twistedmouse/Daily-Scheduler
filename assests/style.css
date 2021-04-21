@@ -48,7 +48,7 @@ textarea{
   border-radius: 15px;
 }
 
-li{
+.startLi{
   list-style: none;
   border-top-style: dashed;
   border-width: 1px;
