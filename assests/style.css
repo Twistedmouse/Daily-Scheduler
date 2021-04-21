@@ -20,10 +20,19 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background: linear-gradient(90deg, rgb(189, 204, 230), rgb(172, 172, 172),  rgb(98, 232, 247), rgb(185, 162, 189), rgb(172, 172, 172));
+  background-size: 10000px;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  animation: grad 20s infinite alternate;
+}
+
+@keyframes grad{
+  0%{ background-position: left;
+  }
+  100%{ background-position: right;
+  }
 }
 
 .description{
