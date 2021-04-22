@@ -88,7 +88,8 @@ textarea{
   background: linear-gradient(90deg, white 0.5%, #d3d3d3bf 65%, #ff6961 100%);
   color: white;
 }
-
+/* for present and future make animation changing from the past colour to the new color 
+add past color to start of present and future also */
 .future {
   background: linear-gradient(90deg, white 0.5%, #d3d3d3bf 65%, #77dd77 100%);
   color: white;

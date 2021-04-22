@@ -2,7 +2,7 @@
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar    
  
-IF type text in textArea      --TODO
+IF type text in textArea      
 WHEN save button is pressed            
 THEN save the text to local storage    
 IF page is refreshed                     --TODO
@@ -18,10 +18,25 @@ is in the past, present, or future
     console.log(timeDate)
 
   let save = document.getElementsByClassName("saveBtn")
+  
 
   $(save).click(function (e) { 
     e.preventDefault();
-    console.log("click click")
 
+    let userInput = e.currentTarget.parentElement.children[1].value
+    let idKey = e.currentTarget.parentElement.children[1].id
+    
+    console.log(userInput, idKey)
+    localStorage.setItem(idKey, userInput)
   });
+
+  
+  // function load() {
+  //   for (let i = 0; i < ; i++) {
+  //     const element = array[i];
+      
+  //   }
+  // }
+
+
     
