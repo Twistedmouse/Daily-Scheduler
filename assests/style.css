@@ -85,12 +85,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background: linear-gradient(90deg, white 0.5%, #d3d3d3bf 65%, #ff6961 100%);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background: linear-gradient(90deg, white 0.5%, #d3d3d3bf 65%, #77dd77 100%);
   color: white;
 }
 
