@@ -30,13 +30,16 @@ is in the past, present, or future
     localStorage.setItem(idKey, userInput)
   });
 
+  let container = document.getElementsByClassName("container")
+  console.log(container[0].children)
   
-  // function load() {
-  //   for (let i = 0; i < ; i++) {
-  //     const element = array[i];
-      
-  //   }
-  // }
+  function load() {
+    for (let i = 0; i < 9; i++) {
+      var element = container[0].children[i].children[1];
+      console.log(element)
+    }
+    
+  } load()
 
 
     
