@@ -31,12 +31,20 @@ is in the past, present, or future
   });
 
   let container = document.getElementsByClassName("container")
-  console.log(container[0].children)
+  console.log(container)
   
   function load() {
     for (let i = 0; i < 9; i++) {
-      var element = container[0].children[i].children[1];
+      var element = container[0].children[i].children[1].id;
+      // get local storage 
+      let storeText = localStorage.getItem(element);
+      // display in textarea (innertext?)
+      console.log(storeText)
       console.log(element)
+      
+     if (element != null) {
+       document.getElementById(element).innerHTML=storeText
+     }
     }
     
   } load()
