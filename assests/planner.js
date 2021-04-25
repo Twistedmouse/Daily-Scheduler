@@ -49,15 +49,19 @@ is in the past, present, or future
     
   } load()
 
-function changeColor() {
-  debugger
+function changeColor() { //debugger
   for (let i = 0; i < 9; i++) {
     var timeChange = container[0].children[i].children[0].innerHTML;
+
     console.log(moment().format("h a"))
     console.log(timeChange)
     console.log(container[0].children[i].children[1])
+    
     if (timeChange == moment().format("h a")) {
      $(container[0].children[i].children[1]).addClass("present");
+     let redIndex = container.children[i]
+    // }else if (redIndex < moment().format("h a")) {
+    //   $(container[0].children[i].children[1]).addClass("future");
     }
   }
 }changeColor()
