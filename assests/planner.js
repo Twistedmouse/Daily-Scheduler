@@ -18,6 +18,7 @@ is in the past, present, or future
     // console.log(timeDate)
     console.log(moment().format("h a"))
   let save = document.getElementsByClassName("saveBtn")
+  let redZone = "";
   
 
   $(save).click(function (e) { 
@@ -49,21 +50,20 @@ is in the past, present, or future
     
   } load()
 
+  
 function changeColor() { //debugger
   for (let i = 0; i < 9; i++) {
     var timeChange = container[0].children[i].children[0].innerHTML;
 
-    console.log(moment().format("h a"))
-    console.log(timeChange)
-    console.log(container[0].children[i].children[1])
+    // console.log(moment().format("h a"))
+    // console.log(timeChange)
+    // console.log(container[0].children[i].children[1])
     
     if (timeChange == moment().format("h a")) {
      $(container[0].children[i].children[1]).addClass("present");
-     let redIndex = container.children[i]
-    // }else if (redIndex < moment().format("h a")) {
-    //   $(container[0].children[i].children[1]).addClass("future");
+     redZone = container.children[i]
+    }else if (redZone < moment().format("h a")) {
+      $(container.children[i].children[1]).addClass("future");
     }
   }
 }changeColor()
-
-    
