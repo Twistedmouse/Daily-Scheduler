@@ -15,8 +15,8 @@ is in the past, present, or future
 
   const timeDate = moment().format('MMMM Do YYYY, h:mm a');
     $("#currentDay").text(timeDate);
-    console.log(timeDate)
-
+    // console.log(timeDate)
+    console.log(moment().format("h a"))
   let save = document.getElementsByClassName("saveBtn")
   
 
@@ -39,9 +39,9 @@ is in the past, present, or future
       // get local storage 
       let storeText = localStorage.getItem(element);
       // display in textarea (innertext?)
-      console.log(storeText)
-      console.log(element)
-      
+      // console.log(storeText)
+      // console.log(element)
+
      if (element != null) {
        document.getElementById(element).innerHTML=storeText
      }
@@ -49,5 +49,17 @@ is in the past, present, or future
     
   } load()
 
+function changeColor() {
+  debugger
+  for (let i = 0; i < 9; i++) {
+    var timeChange = container[0].children[i].children[0].innerHTML;
+    console.log(moment().format("h a"))
+    console.log(timeChange)
+    console.log(container[0].children[i].children[1])
+    if (timeChange == moment().format("h a")) {
+     $(container[0].children[i].children[1]).addClass("present");
+    }
+  }
+}changeColor()
 
     
