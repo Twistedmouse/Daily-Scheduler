@@ -18,7 +18,7 @@ is in the past, present, or future
     // console.log(timeDate)
     console.log(moment().format("h a"))
   let save = document.getElementsByClassName("saveBtn")
-  let redZone = "";
+
   
 
   $(save).click(function (e) { 
@@ -50,23 +50,30 @@ is in the past, present, or future
     
   } load()
 
-  
+  let containerArray = Array.from(container[0].children)
+  let currentArrayNumber = "";
+  console.log(containerArray[0].children[0].innerHTML);
+  console.log(container)
 function changeColor() { //debugger
   for (let i = 0; i < 9; i++) {
     var timeChange = container[0].children[i].children[0].innerHTML;
-
+    let numberSelector = containerArray.indexOf(containerArray[i]);
     // console.log(moment().format("h a"))
     // console.log(timeChange)
-    // console.log(container[0].children[i].children[1])
-    
-    if (timeChange == moment().format("h a")) {
-     $(container[0].children[i].children[1]).addClass("present");
-    //  redZone = container.children[i]
-    }else if (timeChange > moment().format("h a")) {
-      $(container[0].children[i].children[1]).addClass("future");
-      // may need to add more TODO
-    }else if (timeChange < moment().format("h a")) {
+    // console.log(container[0].children)
+  
+    if (timeChange == moment().format("h a")) { 
+      currentArrayNumber = containerArray.indexOf(containerArray[i]);
+      $(container[0].children[i].children[1]).addClass("present");
+      console.log(currentArrayNumber)
+
+     }else if (currentArrayNumber == "" /*<--represents null*/) {
       $(container[0].children[i].children[1]).addClass("past")
+
+     }else if (numberSelector > currentArrayNumber) {
+       
+      $(container[0].children[i].children[1]).addClass("future");
+      
     }
   }
 }changeColor()
