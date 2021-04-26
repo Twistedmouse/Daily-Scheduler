@@ -61,9 +61,12 @@ function changeColor() { //debugger
     
     if (timeChange == moment().format("h a")) {
      $(container[0].children[i].children[1]).addClass("present");
-     redZone = container.children[i]
-    }else if (redZone < moment().format("h a")) {
-      $(container.children[i].children[1]).addClass("future");
+    //  redZone = container.children[i]
+    }else if (timeChange > moment().format("h a")) {
+      $(container[0].children[i].children[1]).addClass("future");
+      // may need to add more TODO
+    }else if (timeChange < moment().format("h a")) {
+      $(container[0].children[i].children[1]).addClass("past")
     }
   }
 }changeColor()
